@@ -1,0 +1,147 @@
+:root {
+    --bg: #121212;
+    --card-bg: #1e1e1e;
+    --accent: #ff4b2b;
+    --text: #e0e0e0;
+    --text-dim: #a0a0a0;
+    --punish-bg: rgba(217, 83, 79, 0.1);
+    --punish-border: #d9534f;
+    --discord: #5865F2;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    flex: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 20px rgba(255, 75, 43, 0.5);
+}
+
+h1 {
+    color: var(--accent);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.search-box {
+    position: sticky;
+    top: 15px;
+    z-index: 100;
+    margin-bottom: 25px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 18px;
+    border: 2px solid #333;
+    border-radius: 12px;
+    background: var(--card-bg);
+    color: #fff;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+#search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(255, 75, 43, 0.3);
+}
+
+.rule-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border-left: 4px solid #333;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.rule-card:hover {
+    transform: translateX(4px);
+    border-left-color: var(--accent);
+}
+
+.rule-card h3 {
+    margin: 0 0 10px 0;
+    color: var(--accent);
+    font-size: 1.1em;
+}
+
+.rule-card p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-dim);
+}
+
+.punishment {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 12px;
+    background: var(--punish-bg);
+    border: 1px solid var(--punish-border);
+    color: var(--punish-border);
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #333;
+}
+
+.discord-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--discord);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.discord-btn:hover {
+    background-color: #4752c4;
+    transform: scale(1.05);
+}
+
+.hidden { display: none; }
+
+.no-results {
+    text-align: center;
+    color: var(--text-dim);
+    margin-top: 60px;
+}
